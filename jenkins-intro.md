@@ -65,4 +65,6 @@ tree
 1. Set MAVEN_HOME to `C:\apache-maven-3.9.7`
 1. Click on `Save` 
 
-    
+## Stop Jenkins [Unsafe]
+1. Logout [Optional]
+2. Goto command prompt where `Jenkins process` is running, and use `CTRL+C` to stop.
