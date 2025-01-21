@@ -51,6 +51,18 @@ cd \Users\AzureAdmin\.jenkins
 tree
 ```
 > You can also use `Windows Explorer` to explore Jenkins Home directory
-- 
+
+## Prepare Jenkins for building Java Project 
+
+1. Log-in into Jenkins
+1. Goto `Manage Jenkins` -> `Tools`
+1. Goto `JDK Installations`, Click on `Add JDK`
+    - Name : Java17
+    - JAVA_HOME:   C:\Program Files\Java\jdk-17
+1. Scroll down for `Maven Installations`
+1. Click on `Add Maven` button
+1. Enter name as `M2` and **uncheck** `Install Automatically`
+1. Set MAVEN_HOME to `C:\apache-maven-3.9.7`
+1. Click on `Save` 
 
     
