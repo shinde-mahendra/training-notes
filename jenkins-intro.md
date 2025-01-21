@@ -34,8 +34,23 @@
     - Install Suggested Plugin [Default]
     - Select Plugins Install [ Not Recommended ] 
 1.  Create the `Admin User` for jenkins 
-2.  Click `Save and continue` -> click `Save and Finish` -> Start using Jenkins
-3.  
+1.  Click `Save and continue` -> click `Save and Finish` -> Start using Jenkins
 
+
+## Explore the Jenkins Home Directory
+
+- Jenkins is installed in `User Home Directory` with name `.jenkins`
+   - On Windows Machines => C:\Users\AzureAdmin\.jenkins
+   - ON Linux Machines   => /home/AzureAdmin/.jenkins
+   - ON MachOS           => /Users/AzureAdmin/.jenkins
+
+- Jenkins Home directory structure
+
+```cmd
+cd \Users\AzureAdmin\.jenkins
+tree
+```
+> You can also use `Windows Explorer` to explore Jenkins Home directory
+- 
 
     
