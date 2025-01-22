@@ -68,7 +68,7 @@ Post-Build-Steps:
   Archive-the-Artifacts:
     Files: target/*.war
   Publish-JUnit-test-result-report:
-     Test-Reports-XML: target/surefire-reports/Test-*.xml
+     Test-Reports-XML: target/surefire-reports/TEST-*.xml
 
 ```
 
