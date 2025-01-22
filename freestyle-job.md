@@ -34,6 +34,43 @@ This feature allows you to control the number of concurrent builds that can run.
 This option permits multiple builds to run concurrently for the same project. It's useful when you have multiple build requests and want to speed up the process by executing them in parallel.
 
 
+## Build Triggers in Jenkins Jobs
+
+Build Triggers in Jenkins allow you to automate the initiation of your jobs based on certain conditions or events. These triggers help ensure that your build process is efficient, timely, and responsive to changes.
+
+### Common Build Triggers
+
+- **Poll SCM**: Periodically checks the source control system (like Git) for changes. If changes are detected, a new build is triggered. 
+  - Example: `H/5 * * * *` (polls every 5 minutes)
+
+- **Build Periodically**: Schedules builds at regular intervals using cron-like syntax. This is useful for running jobs at specific times or dates.
+  - Example: `@daily` (runs once a day)
+
+- **GitHub Hook Trigger for GITScm Polling**: Automatically triggers a build when a commit is pushed to a GitHub repository. This requires configuring a webhook in GitHub.
+
+- **Trigger builds remotely (e.g., from scripts)**: Allows builds to be triggered via an external source, such as a script or a URL. A unique token is used to authenticate the trigger.
+  - Example: `http://your-jenkins-url/job/your-job-name/build?token=TOKEN_NAME`
+
+- **Build after other projects are built**: Triggers a build of the current project after one or more specified projects have been built successfully. This is useful for creating a chain of dependent jobs.
+
+- **Build after other projects are completed**: Similar to the previous trigger, but starts the build irrespective of the build result of the upstream project.
+
+### Example Configuration
+
+Here is an example configuration for setting up build triggers in a Jenkins job:
+
+```yaml
+Build Triggers:
+  - Poll SCM: 
+    - Schedule: H/5 * * * *
+  - Build Periodically: 
+    - Schedule: @daily
+  - GitHub Hook Trigger: true
+  - Trigger Builds Remotely: 
+    - URL: http://your-jenkins-url/job/your-job-name/build?token=TOKEN_NAME
+  - Build After Other Projects Are Built: 
+    - Projects: another-job-name
+```
 
 ## Demo 1
 
