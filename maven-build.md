@@ -53,6 +53,7 @@ General:
 Source-Code-Management:
   Git:
     Repository: https://github.com/mahendra-shinde/webgoat
+    Branch: */main
 
 Build-Triggers: None
 
