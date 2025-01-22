@@ -42,3 +42,33 @@ Post-Build-Steps:
   Archive-the-Artifacts:
     Files: target/*.war
 ```
+
+## Assignment
+> Build and Test (Unit Tests) a sample Java Application `WebGoat`
+
+
+```yaml
+General:
+  Description: Sample Java Project with JUnit Test Cases
+Source-Code-Management:
+  Git:
+    Repository: https://github.com/mahendra-shinde/webgoat
+
+Build-Triggers: None
+
+Build-Environment: Delete workspace before build starts
+  
+Build-Steps:
+  Invoke-Top-Level-Maven-Target:
+    Maven-Version: M2
+    Goals: package 
+
+Post-Build-Steps:
+  Archive-the-Artifacts:
+    Files: target/*.war
+  Publish-JUnit-test-result-report:
+     Test-Reports-XML: target/surefire-reports/Test-*.xml
+
+```
+
+ 
