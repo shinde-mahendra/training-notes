@@ -19,6 +19,22 @@ A Jenkins freestyle job is a type of project that allows you to define a sequenc
 - **Build Steps**: Define the steps to execute during the build process.
 - **Post-Build Actions**: Configure actions to perform after the build completes.
 
+## Options under `General` stage
+
+**Discard Old Builds**:
+This option helps manage storage by automatically discarding old build artifacts. You can set conditions like the maximum number of builds to keep or the maximum number of days to retain builds.
+
+**This project is parameterized**:
+Enabling this option allows you to define parameters that can be used during the build process. For example, you can prompt for user inputs like strings, choices, or files, and these parameters can be accessed within the build script.
+
+**Throttle Builds**:
+This feature allows you to control the number of concurrent builds that can run. You can specify a maximum number of builds to be executed simultaneously, which helps manage resource usage and prevent overloading your build server.
+
+**Execute concurrent builds if necessary**:
+This option permits multiple builds to run concurrently for the same project. It's useful when you have multiple build requests and want to speed up the process by executing them in parallel.
+
+
+
 ## Demo 1
 
 1. Login into Jenkins with Admin User
