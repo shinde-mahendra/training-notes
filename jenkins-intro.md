@@ -29,6 +29,9 @@
     > Instead use Right Click of mouse to copy
 
 1.  Visit `http://localhost:8080` with web browser.
+
+    > DO NOT USE MS Internet Explorer, Use MS Edge Web browser
+
 1.  Provide the Initial password and click to continue
 1.  Jenkins post installation setup, now would give you TWO choices
     - Install Suggested Plugin [Default]
