@@ -45,3 +45,13 @@ security:
 7. For User-2 and User-1 set "Overall/Read" permission.
 8. Open a new `Private` or `Incognito` browser window and login with `User-1` or `User-2`
 
+## Remote Execution (from script)
+1. Jenkins job could be launched from outside jenkins using a simple HTTP GET request.
+1.  Pre-requisites
+    - A User with these permissions **Overall/Read, Job/Read, Job/Build **
+    - In Job Configuration, trigger `Build Remotely` must be enabled with token.
+    - Know your Job's URL
+    - Example with cURL
+      `curl http://localhost:8080/job/Job2/build?token=BUILD_NOW -u user-2:Password`
+  
+    
