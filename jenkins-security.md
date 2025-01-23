@@ -34,3 +34,14 @@ security:
           - "Job/Read"
           
 ```
+
+## Demo
+1. Login with the admin user (First Admin User)
+2. Goto "Manage Jenkins" > "Security" Or Visit "http://localhost:8080/manage/configureSecurity/"
+3. Change "Authorization" from "Logged In Users can do Anything" to "Metrix Based Security"
+4. Click on "Add User" button to add user current admin user (In my case it was `mahendra`)
+5. Repeate same process to add Other users (User-1 and User-2)
+6. For Admin user `mahendra` set "Overall/Administrator" permissions.
+7. For User-2 and User-1 set "Overall/Read" permission.
+8. Open a new `Private` or `Incognito` browser window and login with `User-1` or `User-2`
+
