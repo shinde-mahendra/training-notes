@@ -9,3 +9,10 @@
 
     > Kindly replace YOURNAME with your name in lower letters.
 5.  Click on `Save` button and then `Build Now`. Check if your build is successful.
+6.  Goto `Jenkina Manager` > `Credentials` > `System` > `Global Credentials (unrestricted)`
+7.  Click on `docker-id` and view docker username and password (Password is concealed)
+8.  Go back to `Dashboard` of jenkins, select the project/job created in step #2. Then click `Configure` button.
+9.  Scroll down to `Build/Publish Docker image` step.
+10.  Check/Enable `Push Image` and then for Registry credentials choose `docker-id`
+11.  Check/Enable `Clean local images` and then `Save` the changes.
+12.  Click `Build Now` button to start the job.
